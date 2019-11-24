@@ -5,8 +5,13 @@
   font-family: Arial,sans-serif;
 }
 
+
+
 body{
-  margin:10px;
+  margin:60px;
+  background-image:url("../img/bg-masthead.jpg");
+  
+
 }
 
 a{
