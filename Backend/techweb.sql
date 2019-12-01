@@ -35,10 +35,10 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `techweb`.`propostas` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(100) NOT NULL,
-  `email`  VARCHAR(100) NULL,
-  `serviço` VARCHAR(100) NOT NULL,
-  `obs` VARCHAR(350) NOT NULL,
+  `data` CHAR(11) NOT NULL,
+  `serviço`  VARCHAR(30) NULL,
+  `urgencia` VARCHAR(3) NOT NULL,
+  `obs` VARCHAR(300) NOT NULL,
   `clientes_id` INT NOT NULL,
   PRIMARY KEY (`id`),  
   FOREIGN KEY (`clientes_id`) REFERENCES `techweb`.`clientes` (`id`)
