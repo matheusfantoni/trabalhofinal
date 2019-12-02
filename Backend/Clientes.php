@@ -44,7 +44,13 @@ Class Clientes{
 	else{ //Não foi encontrado o email
 
 		$cmd = $this->pdo->prepare("INSERT INTO clientes(nome, telefone, email, senha) VALUES (:n, :t, :e, :s)");
-			$cmd->bindValue(":n", )
+			$cmd->bindValue(":n", $nome);
+			$cmd->bindValue(":t", $telefone);
+			$cmd->bindValue(":e", $email);
+			$cmd->bindValue(":s", $senha);
+			$cmd->execute();
+
+			return true;
 	}
 		
 
