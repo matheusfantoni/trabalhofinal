@@ -2,7 +2,7 @@
 
 header("Access-Control-Allow-Origin: *");
 //define('PASTAPROJETO', 'AulaBanco');
-define('PASTAPROJETO', 'AulaBanco');
+define('PASTAPROJETO', 'trabalhofinal/Backend');
 
 /* Função criada para retornar o tipo de requisição */
 function checkRequest() {
@@ -34,20 +34,12 @@ $request = $_SERVER['REQUEST_URI'];
 // IDENTIFICA A URI DA REQUISIÇÃO
 
 switch ($request) {
-    case '/'.PASTAPROJETO:
-      require __DIR__ . '/api/api.php';
+    
+    case '/'.PASTAPROJETO.'/clientes' :
+        require __DIR__ . '/api/'.$answer.'_clientes.php';
         break;
-    case '/'.PASTAPROJETO.'/' :
-        require __DIR__ . '/api/api.php';
-        break;
-    case '' :
-        require __DIR__ . '/api/api.php';
-        break;
-    case '/'.PASTAPROJETO.'/pessoas' :
-        require __DIR__ . '/api/'.$answer.'_pessoa.php';
-        break;
-    case '/'.PASTAPROJETO.'/conteudo' :
-        require __DIR__ . '/api/'.$answer.'_conteudo.php';
+    case '/'.PASTAPROJETO.'/propostas' :
+        require __DIR__ . '/api/'.$answer.'_propostas.php';
         break;
     
     default:
